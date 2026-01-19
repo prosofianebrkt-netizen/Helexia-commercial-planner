@@ -1,20 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Helexia Solar Master Planner (Enterprise Edition)
 
-# Run and deploy your AI Studio app
+Application de planification stratégique pour le déploiement de centrales photovoltaïques.
 
-This contains everything you need to run your app locally.
+## 🚀 Installation Locale
 
-View your app in AI Studio: https://ai.studio/apps/drive/1WcE3s1fX2o2BX_ycLITbzfUoAHIgwjl3
+1.  Assurez-vous d'avoir [Node.js](https://nodejs.org/) installé.
+2.  Installez les dépendances :
+    ```bash
+    npm install
+    ```
+3.  Lancez le serveur de développement :
+    ```bash
+    npm run dev
+    ```
 
-## Run Locally
+## 🌐 Hébergement sur GitHub Pages
 
-**Prerequisites:**  Node.js
+Pour rendre cette application publique sur GitHub :
 
+1.  **Créer le Repository** : Créez un nouveau repository public sur GitHub.
+2.  **Pousser le code** :
+    ```bash
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git branch -M main
+    git remote add origin https://github.com/VOTRE_NOM_UTILISATEUR/NOM_DU_REPO.git
+    git push -u origin main
+    ```
+3.  **Activer GitHub Pages** :
+    *   Allez dans les **Settings** de votre repository.
+    *   Cliquez sur **Pages** dans le menu de gauche.
+    *   Sous "Build and deployment", choisissez **GitHub Actions**.
+    *   GitHub détectera automatiquement qu'il s'agit d'un projet Vite/Static et proposera un workflow, ou vous pouvez simplement choisir "Static HTML" si vous buildez manuellement.
+    
+    *Méthode alternative (Branche gh-pages)* :
+    1.  Lancez le build localement : `npm run build`
+    2.  Poussez le contenu du dossier `dist` sur une branche `gh-pages`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠 Stack Technique
+
+*   **Core** : React 19, TypeScript
+*   **Build** : Vite
+*   **Styling** : Tailwind CSS (via CDN configuration pour portabilité)
+*   **Architecture** : Moteur de calcul `scheduler.ts` découplé de l'interface.
